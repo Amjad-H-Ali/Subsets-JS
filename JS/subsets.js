@@ -19,5 +19,8 @@ const helper = (data, subset, i) => {
 	else {
 		// Populate subset with null for [null, null, etc.] will be our first set.
 		subset[i] = null;
+
+		// For when we insert one value
+		helper(data, subset, i + 1);
 	}
 }
