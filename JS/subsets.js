@@ -20,7 +20,11 @@ const helper = (data, subset, i) => {
 		// Populate subset with null for [null, null, etc.] will be our first set.
 		subset[i] = null;
 
-		// For when we insert one value
+		helper(data, subset, i + 1);
+
+		// For when we insert values
+		subset[i] = data[i];
+
 		helper(data, subset, i + 1);
 	}
 }
