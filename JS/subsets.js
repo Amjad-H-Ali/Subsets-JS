@@ -28,3 +28,12 @@ const helper = (data, subset, i) => {
 		helper(data, subset, i + 1);
 	}
 }
+subsets(['a', 'b', 'c', 'd']);
+
+console.log("-----------------");
+
+subsets([1, 2]); // [null, null], [null, 2], [1, null], [1, 2]
+
+console.log("-----------------");
+
+subsets(['monkey', 'banana']);
