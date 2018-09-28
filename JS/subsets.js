@@ -13,6 +13,11 @@ const subsets = (data) => {
 // Helper Function that will take in data array, subset array, and current index
 // Only prints to std output.
 const helper = (data, subset, i) => {
-	// When i has exceeded data array, it means we found a subset. Print it.
+	// When i has exceeded data array length, it means we found a subset. Print it.
 	if (i === data.length) console.log(subset);
+
+	else {
+		// Populate subset with null for [null, null, etc.] will be our first set.
+		subset[i] = null;
+	}
 }
